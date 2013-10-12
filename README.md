@@ -1,10 +1,11 @@
 vimrc
 =====
-#This folder contains my vim stylesheet and a list of plug-ins I have installed 
-#and reference website. Actually, I just hope to document down what I have studied :D
+This folder contains my vim stylesheet and a list of plug-ins I have installed 
+and reference website. Actually, I just hope to document down what I have studied :D
 
 
-#Stylesheet will be place under ./style
+#Stylesheet 
+place under ./style
 
 #Plug-in I have installed: 
 git clone https://github.com/msanders/snipmate.vim
