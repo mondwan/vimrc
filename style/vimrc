@@ -1,1 +1,23 @@
-/home/mondwan/.vimrc
+set nocompatible	" To be safe
+set title		" Terminal title
+set nu    		" line num
+set ruler 		" Cursor position
+set showmode            " Display --insert--
+set cursorline		" current line effect
+hi cursorline cterm=NONE ctermbg=darkgray
+set showmatch		" set show matching parenthesis
+set incsearch		" show search matches as you type
+set hlsearch		" highligh search terms
+hi Search term=reverse cterm=bold ctermfg=6 guifg=cyan guibg=Yellow ctermbg=none
+set nowrap		" don't wrap lines
+set autoindent		" set autoindenting on
+set copyindent		" copy the previous indentation on autoindenting
+set foldenable
+syntax on
+hi StatusLine cterm=bold ctermbg=LightMagenta ctermfg=Green
+hi StatusLineNC cterm=none ctermbg=LightMagenta 
+set showtabline=2
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+nnoremap ; :
