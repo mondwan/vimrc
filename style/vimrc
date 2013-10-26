@@ -21,3 +21,5 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 nnoremap ; :
+set splitbelow		"horizontal split will appear below the old one for now
+set splitright 		"vertical split will appear to the right of the old one for now
