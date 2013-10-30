@@ -17,9 +17,15 @@ syntax on
 hi StatusLine cterm=bold ctermbg=LightMagenta ctermfg=Green
 hi StatusLineNC cterm=none ctermbg=LightMagenta 
 set showtabline=2
+nnoremap ; :
+"enable plugin with pathogen
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-nnoremap ; :
+"Split window related
 set splitbelow		"horizontal split will appear below the old one for now
 set splitright 		"vertical split will appear to the right of the old one for now
+nmap <C-j> <C-w>j	
+nmap <C-k> <C-w>k	
+nmap <C-h> <C-w>h	
+nmap <C-l> <C-w>l	
