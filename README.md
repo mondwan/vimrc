@@ -20,10 +20,10 @@ and reference website. Actually, I just hope to document down what I have studie
 ##NERTREE
 *	git clone https://github.com/scrooloose/nerdtree.git
 
-##javascript related
-*	git clone https://github/com/walm/jshint.vim
-*	git clone https://github.com/moll/vim-node
-*	git clone https://github.com/ahayman/vim-nodejs-complete
+##jshint
+*	sudo apt-get install npm nodejs
+*	sudo npm install -g jshint
+*	git clone https://github.com/Shutnik/jshint2.vim
 
 ##others
 *	git clone https://github.com/majutsushi/tagbar
