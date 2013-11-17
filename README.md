@@ -28,7 +28,6 @@ and reference website. Actually, I just hope to document down what I have studie
 ##others
 *	git clone https://github.com/majutsushi/tagbar
 *	git clone https://github.com/marijnh/tern\_for\_vim
-*	git clone git://github.com/tpope/vim-sensible.git
 
 #Reference
 *	nvie.com/posts/how-i-boosted-my-vim

@@ -1,30 +1,76 @@
-set nocompatible	" To be safe
+"Enable plugin with pathogen
+execute pathogen#infect()
+
+"General Setting
+set nocompatible	" not compatible with the old-fashion vi mode
+set bs=2		" allow backspacing over everything in insert mode
+set history=50		" keep 50 lines of command history
 set title		" Terminal title
-set nu    		" line num
 set ruler 		" Cursor position
-set showmode            " Display --insert--
+filetype off		" necessary to make ftdetect work on Linux
+syntax on
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
+set hlsearch		" highligh search terms
 set cursorline		" current line effect
 hi cursorline cterm=NONE ctermbg=darkgray
+set showmode            " Display --insert--
 set showmatch		" set show matching parenthesis
-set incsearch		" show search matches as you type
-set hlsearch		" highligh search terms
-hi Search term=reverse cterm=bold ctermfg=6 guifg=cyan guibg=Yellow ctermbg=none
-set nowrap		" don't wrap lines
 set autoindent		" set autoindenting on
+set incsearch		" show search matches as you type
+hi Search term=reverse cterm=bold ctermfg=6 guifg=cyan guibg=Yellow ctermbg=none
 set copyindent		" copy the previous indentation on autoindenting
+set smartcase		" ignore case if search pattern is all lowercase,case-sensitive otherwise
+set smarttab		" insert tabs on the start of a line according to context
+set nu    		" line num
+set nowrap		" don't wrap lines
 set foldenable
-syntax on
-hi StatusLine cterm=bold ctermbg=LightMagenta ctermfg=Green
-hi StatusLineNC cterm=none ctermbg=LightMagenta 
-set showtabline=2
-nnoremap ; :
-"enable plugin with pathogen
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+set showtabline=2	" always show tabline
+set autoread		" auto read when file is changed outside
+
+"Color schemes
+if &t_Co == 8 && $TERM !~# '^linux'
+  set t_Co=16
+endif
+
+"status line {
+function! CurDir()
+    let curdir = substitute(getcwd(), $HOME, "~", "")
+    return curdir
+endfunction
+
+function! HasPaste()
+    if &paste
+        return '[PASTE]'
+    else
+        return ''
+    endif
+endfunction
+set laststatus=2
+set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
+set statusline+=\ \ \ [%{&ff}/%Y] 
+set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\ 
+set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L
+hi StatusLine cterm=bold ctermbg=DarkMagenta ctermfg=Green
+hi StatusLineNC cterm=none ctermbg=DarkMagenta 
+"}
+
+" Enable omni completion. (Ctrl-X Ctrl-O)
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType java set omnifunc=javacomplete#Complete
+
 "Split window related
 set splitbelow		"horizontal split will appear below the old one for now
 set splitright 		"vertical split will appear to the right of the old one for now
+
+"Customize short-cut
+nnoremap ; :
 nmap <C-j> <C-w>j	
 nmap <C-k> <C-w>k	
 nmap <C-h> <C-w>h	
