@@ -1,7 +1,7 @@
-"Enable plugin with pathogen
+" Enable plugin with pathogen
 execute pathogen#infect()
 
-"General Setting
+" General Setting
 set nocompatible	" not compatible with the old-fashion vi mode
 set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command history
@@ -29,12 +29,12 @@ set foldenable
 set showtabline=2	" always show tabline
 set autoread		" auto read when file is changed outside
 
-"Color schemes
+" Color schemes
 if &t_Co == 8 && $TERM !~# '^linux'
   set t_Co=16
 endif
 
-"status line {
+" Status line {
 function! CurDir()
     let curdir = substitute(getcwd(), $HOME, "~", "")
     return curdir
@@ -61,15 +61,28 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType java set omnifunc=javacomplete#Complete
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType c setlocal omnifunc=ccomplete#Complete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+if has("autocmd") && exists("+omnifunc")
+	autocmd Filetype *
+		\        if &omnifunc == "" |
+		\                setlocal omnifunc=syntaxcomplete#Complete |
+		\        endif
+endif
+  
 
-"Split window related
-set splitbelow		"horizontal split will appear below the old one for now
-set splitright 		"vertical split will appear to the right of the old one for now
+" Comments
+set formatoptions=qrowcb
+setl comments=sl:/**,mb:*,elx:*/,://,:# " By default
+autocmd FileType php set comments=sl:/**,mb:*,elx:*/,://,:# " php comments
 
-"Customize short-cut
+" Split window related
+set splitbelow		" horizontal split will appear below the old one for now
+set splitright 		" vertical split will appear to the right of the old one for now
+
+" Customize short-cut
 nnoremap ; :
 nmap <C-j> <C-w>j	
 nmap <C-k> <C-w>k	
