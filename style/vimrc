@@ -28,6 +28,9 @@ set nowrap		" don't wrap lines
 set foldenable
 set showtabline=2	" always show tabline
 set autoread		" auto read when file is changed outside
+set expandtab		" enable replacing tab with spaces
+set tabstop=4		" replace tab with 4 spaces
+set shiftwidth=4	" indentation with 4 spaces
 
 " Color schemes
 if &t_Co == 8 && $TERM !~# '^linux'
@@ -65,6 +68,7 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+autocmd FileType make setlocal noexpandtab " disable expand tab feature on makefile
 if has("autocmd") && exists("+omnifunc")
 	autocmd Filetype *
 		\        if &omnifunc == "" |
