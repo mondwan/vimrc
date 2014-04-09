@@ -28,9 +28,9 @@ set nowrap		" don't wrap lines
 set foldenable
 set showtabline=2	" always show tabline
 set autoread		" auto read when file is changed outside
-set expandtab		" enable replacing tab with spaces
-set tabstop=4		" replace tab with 4 spaces
-set shiftwidth=4	" indentation with 4 spaces
+set expandtab		" replace tab by space
+set tabstop=4		" # of space for a signal tab key
+set shiftwidth=4	" # of space for reindent operations ">>" or "<<"
 
 " Color schemes
 if &t_Co == 8 && $TERM !~# '^linux'
@@ -62,10 +62,10 @@ hi StatusLineNC cterm=none ctermbg=DarkMagenta
 " Enable omni completion. (Ctrl-X Ctrl-O)
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete noexpandtab
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType c setlocal omnifunc=ccomplete#Complete
+autocmd FileType c setlocal omnifunc=ccomplete#Complete shiftwidth=8 tabstop=8
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType make setlocal noexpandtab " disable expand tab feature on makefile
