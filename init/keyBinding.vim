@@ -11,7 +11,7 @@ cmap <C-a> <C-b>
 nnoremap ; :
 
 " Calling nerdtree
-map <C-n> :NERDTree<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " Calling tagbar
 nmap <F1> :TagbarToggle<CR>
