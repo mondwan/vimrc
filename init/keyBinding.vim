@@ -11,8 +11,14 @@ cmap <C-a> <C-b>
 nnoremap ; :
 
 " Calling nerdtree
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Calling tagbar
-nmap <F1> :TagbarToggle<CR>
+nnoremap <F1> :TagbarToggle<CR>
+
+" Calling Syntastic
+nnoremap <F2> :SyntasticCheck<CR>
+" Jump next errors stated on location-list
+nnoremap <C-,> :lnext<CR>
+nnoremap <C-.> :lprev<CR>
 

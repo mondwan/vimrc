@@ -21,6 +21,7 @@ Bundle 'Shutnik/jshint2.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'chriskempson/vim-tomorrow-theme'
 
 filetype plugin indent on

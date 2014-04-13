@@ -33,6 +33,10 @@ set statusline+=%*
 
 set statusline+=%=                                  " left/right separator
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}        " Results from Syntastic plugin
+set statusline+=%*
+
 set statusline+=%#error#
 set statusline+=%{&paste?'[PASTE]':''}              " Indicate paste mode
 set statusline+=%*
