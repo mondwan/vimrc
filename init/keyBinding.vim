@@ -17,8 +17,20 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <F1> :TagbarToggle<CR>
 
 " Calling Syntastic
-nnoremap <F2> :SyntasticCheck<CR>
+function! ToggleErrors()
+" http://stackoverflow.com/questions/17512794/toggle-error-location-panel-in-syntastic?answertab=votes#tab-top
+    let old_last_winnr = winnr('$')
+    lclose
+    SyntasticReset
+    if old_last_winnr == winnr('$')
+        " Nothing was closed, open syntastic error location panel
+        SyntasticCheck
+        Errors
+    endif
+endfunction
+
+nnoremap <F2> :call ToggleErrors()<CR>
 " Jump next errors stated on location-list
-nnoremap <C-,> :lnext<CR>
-nnoremap <C-.> :lprev<CR>
+nnoremap <F3> :lnext<CR>
+nnoremap <F4> :lprev<CR>
 
