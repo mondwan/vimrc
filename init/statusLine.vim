@@ -14,7 +14,7 @@ set statusline+=%#identifier#
 set statusline+=%m                                  " modified flag
 set statusline+=%*
 
-set statusline+=\ %{CurDir()}/%t                    " filename
+set statusline+=\ %t                                " filename
 
 set statusline+=%h                                  " help file flag
 set statusline+=\ %y                                " file type
