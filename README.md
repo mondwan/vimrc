@@ -1,12 +1,23 @@
 vimrc
 =====
 
-##What's News:
+Configuration for vim
 
-Using [Vundle](https://github.com/gmarik/Vundle.vim) instead of [pathogen](https://github.com/tpope/vim-pathogen)
-to manage my vim-plugins.
+@author: Mond WAN <mondwan.1015@gmail.com>
 
-#Directory layout:
+@last-modified: 2016-11-29 11:23
+
+# Getting started:
+
+```
+$> bash config.sh
+#
+# Install dependencies manually
+#
+$> bash check.sh
+```
+
+# Directory layout:
 
 - README.md
 
@@ -30,50 +41,47 @@ Despite Vundle, a submodule required by Vundle, all stuff here will be ignored
 Ignore stuff in bundle and any vim swp files
 
 - ftplugin
-- ftpligin/javascript.vim
-- ftpligin/make.vim
-- ftpligin/php.vim
-- ftpligin/python.vim
+- ftpligin/*.vim
 
-Some vimrc setting related to a specific language
+Setting related to a specific language
 
-#Quick reference for plug-ins I have installed
+# Package overview
 
-Grouped by target plug-in.
+Packages I have used which grouped by plug-ins
 
-Note: Some of them are dependencies which required you to install them manually
-
-##snipmate
+## snipmate
 
 - [vim-snipmate](https://github.com/garbas/vim-snipmate.git)
 - [tlib\_vim](https://github.com/tomtom/tlib\_vim.git)
 - [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils.git)
 - [vim-snippets](https://github.com/honza/vim-snippets.git)
 
-##NERTREE
+## NERTREE
 
 - [nerdtree](https://github.com/scrooloose/nerdtree.git)
 
-##Tagbar
+## Tagbar
 
 - [tagbar](https://github.com/majutsushi/tagbar.git)
 - [exuberant-ctags](http://ctags.sourceforge.net/)
 
-##Syntastic
+## Syntastic
 
 - [syntastic](https://github.com/scrooloose/syntastic.git)
-- [pylint](http://www.pylint.org/)
-- [jshint](http://www.jshint.com/)
+- [eslint](http://eslint.org/)
 - [Php Code sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
 - [phpmd](http://phpmd.org/)
+- luac
+- luacheck
+- flake8
 
-##ColorScheme
+## ColorScheme
 
 - [Tomorrow](https://github.com/chriskempson/vim-tomorrow-theme)
 - [Distinguished](https://github.com/Lokaltog/vim-distinguished)
 - [Solarized](https://github.com/altercation/vim-colors-solarized)
 
-#Reference
+# Reference
 
 * http://nvie.com/posts/how-i-boosted-my-vim/
 * http://codecampo.com/topics/717
