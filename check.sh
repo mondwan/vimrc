@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PACKAGE_NAMES="flake8 eslint ctags luac luacheck"
+PACKAGE_NAMES="flake8 eslint ctags luac luacheck bashate shellcheck"
 
 for pkg in ${PACKAGE_NAMES}
 do

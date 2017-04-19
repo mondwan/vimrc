@@ -17,5 +17,6 @@ Configuration is completed. However, you need to install programs
 below in order to make those plugins work:
 
 flake8, eslint, php_code_sniffer, phpmd, luac, luacheck, exuberant-ctags
+bashate, shellcheck
 ------------------------------------------------------------------------
 __EOF__
