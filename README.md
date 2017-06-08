@@ -9,7 +9,7 @@ Configuration for vim
 
 # How to use:
 
-```
+```shell
 # Install Vundle so that we can download other modules later on
 # As I have mark a specific vundle with submodule, so install via git-submodule
 git submodule update --init --recursive
