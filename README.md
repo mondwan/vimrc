@@ -5,15 +5,44 @@ Configuration for vim
 
 @author: Mond WAN <mondwan.1015@gmail.com>
 
-@last-modified: 2016-11-29 11:23
+@last-modified: 2017-06-08
 
-# Getting started:
+# How to use:
+
+```
+# Install Vundle so that we can download other modules later on
+# As I have mark a specific vundle with submodule, so install via git-submodule
+git submodule update --init --recursive
+
+# Copy vim configuration to your HOME directory
+# Make sure ~/.vimrc and ~/.vim is empty at first
+rm -fr ~/.vimrc ~/.vim
+
+# Symbolic link .vimrc and .vim
+ln -snf . $HOME/.vim
+ln -snf vimrc $HOME/.vimrc
+
+# Install other modules via Vundle
+vim +BundleInstall +qall
+
+# NOTE:
+# As some of the vim modules rely on executables like `flake8`, `eslint`,
+# and installation for them varied between platforms, you need to install them
+# manually othewise corresponding plugins will not work.
+```
+
+# Scripts
+
+You may try to run `config.sh` for installation as following:
 
 ```
 $> bash config.sh
-#
-# Install dependencies manually
-#
+```
+
+You can run following script to check whether commands required by those
+vim modules have been installed or not.
+
+```
 $> bash check.sh
 ```
 
