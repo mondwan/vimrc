@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'mfukar/robotframework-vim'
+Plugin 'isRuslan/vim-es6'
 
 filetype plugin indent on
 
