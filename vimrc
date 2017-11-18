@@ -9,7 +9,7 @@ syntax on
 
 " Vundle stuff
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 Plugin 'gmarik/vundle'
 Plugin 'tomtom/tlib_vim'
@@ -25,6 +25,7 @@ Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'mfukar/robotframework-vim'
 Plugin 'isRuslan/vim-es6'
 
+call vundle#end()
 filetype plugin indent on
 
 " Source initialization files
