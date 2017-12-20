@@ -7,7 +7,6 @@ let g:syntastic_c_compiler_options = '-Wall -std=c99'
 let g:syntastic_c_config_file = '.syntastic_c_config'
 
 function! Formatonsave()
-    let l:lines = 'all'
     let l:formatdiff = 1
     pyf /usr/share/clang/clang-format-5.0/clang-format.py
 endfunction
