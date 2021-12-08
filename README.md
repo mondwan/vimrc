@@ -5,7 +5,7 @@ Configuration for vim
 
 @author: Mond WAN <mondwan.1015@gmail.com>
 
-@last-modified: 2017-06-08
+@last-modified: 2021-12-08
 
 # How to use:
 
@@ -19,8 +19,8 @@ git submodule update --init --recursive
 rm -fr ~/.vimrc ~/.vim
 
 # Symbolic link .vimrc and .vim
-ln -snf . $HOME/.vim
-ln -snf vimrc $HOME/.vimrc
+ln -snf `pwd` $HOME/.vim
+ln -snf `pwd`/vimrc $HOME/.vimrc
 
 # Install other modules via Vundle
 vim +BundleInstall +qall
