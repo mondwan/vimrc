@@ -17,3 +17,6 @@ let g:snips_github = 'https://github.com/mondwan'
 
 " Change colors on error highlight
  highlight link SyntasticError Error
+
+" Use latest snippet parser
+let g:snipMate = {'snippet_version' : 1}
